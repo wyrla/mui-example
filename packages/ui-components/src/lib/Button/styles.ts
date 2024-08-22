@@ -5,5 +5,5 @@ import MButton from '@mui/material/Button';
 
 export const SB = styled(MButton)`${({theme}) => {
   return css`
-  background: ${theme.palette.secondary.main}
+  background: ${theme.palette.secondary.main};
 `}}`;
