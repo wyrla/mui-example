@@ -5,5 +5,5 @@ import styled from '@emotion/styled';
 
 export const IB = styled(MButton)`${({theme}) => {
   return css`
-  background: ${theme.palette.primary[100]}
+  background: ${theme.palette.primary[200]}
 `}}`;
