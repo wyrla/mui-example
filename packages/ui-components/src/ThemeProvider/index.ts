@@ -1,4 +1,4 @@
 export * from './palette';
 export * from './theme';
 export * from './predefined-themes';
-export * from './theme-provider';
+export {default as ThemeProvider, useTheme} from './theme-provider';
