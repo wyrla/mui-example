@@ -1,4 +1,7 @@
-import './global.css';
+// 'use client';
+// import './global.css';
+
+import ThemeProvider from '../lib/ThemeProvider';
 
 export const metadata = {
   title: 'Welcome to apps/alpha',
@@ -12,7 +15,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <ThemeProvider>{children}</ThemeProvider>
+      </body>
     </html>
   );
 }
