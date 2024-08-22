@@ -1,7 +1,12 @@
 import React from 'react';
-import { createTheme, ThemeProvider as MTP } from '@mui/material/styles';
+import {
+  createTheme,
+  ThemeProvider as MUIThemeProvider,
+} from '@mui/material/styles';
 import { Theme } from './theme';
 import { ThemeOptions, themes } from './predefined-themes';
+import { CssBaseline, THEME_ID } from '@mui/material';
+import { ThemeProvider as EmotionThemeProvider } from '@emotion/react';
 
 const DEFAULT_THEME: Theme = {
   name: 'default',
@@ -54,7 +59,12 @@ const ThemeProvider: React.FC<ThemeProviderProps> = ({
   const compatibleTheme = resolveMui(t);
   return (
     <ThemeContext.Provider value={t}>
-      <MTP theme={compatibleTheme}>{children}</MTP>
+      <EmotionThemeProvider theme={t}>
+        <MUIThemeProvider theme={{ [THEME_ID]: compatibleTheme }}>
+          <CssBaseline />
+          {children}
+        </MUIThemeProvider>
+      </EmotionThemeProvider>
     </ThemeContext.Provider>
   );
 };
