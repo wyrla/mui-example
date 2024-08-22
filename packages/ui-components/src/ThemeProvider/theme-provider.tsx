@@ -3,7 +3,7 @@ import { createTheme, ThemeProvider as MTP } from '@mui/material/styles';
 import { Theme } from './theme';
 import { ThemeOptions, themes } from './predefined-themes';
 
-const DEFAULT_THEME = {
+const DEFAULT_THEME: Theme = {
   name: 'default',
   palette: {
     primary: {
