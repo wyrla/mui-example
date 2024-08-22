@@ -1,9 +1,9 @@
 import { css, styled } from "@mui/material";
-import MButton from '@mui/material/Button'
-// import {} from '@emotion/styled';
+import MButton from '@mui/material/Button';
+// import {css} from '@emotion/react';
+// import styled from '@emotion/styled';
 
 export const SB = styled(MButton)`${({theme}) => {
-  console.log('SB =  mui', theme)
   return css`
   background: ${theme.palette.secondary.main}
 `}}`;
