@@ -17,7 +17,8 @@ export default function ThemeProvider({
     <>
     <form>
     <label>Escolha o tema: </label>
-      <select onChange={(e) => setChosenTheme(e.target.value)}>
+      <select defaultValue={'default'} onChange={(e) => setChosenTheme(e.target.value === 'default' ? theme : e.target.value)}>
+        <option value={'default'}>tema padrão</option>
         <option value={'foo'}>Foo</option>
         <option value={'bar'}>Bar</option>
       </select>
